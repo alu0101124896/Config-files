@@ -1,0 +1,43 @@
+{
+    "enabled": true,
+    "theme": {
+        "mode": 1,
+        "brightness": 100,
+        "contrast": 111,
+        "grayscale": 0,
+        "sepia": 25,
+        "useFont": false,
+        "fontFamily": "system-ui",
+        "textStroke": 0,
+        "engine": "dynamicTheme",
+        "stylesheet": "",
+        "darkSchemeBackgroundColor": "#181a1b",
+        "darkSchemeTextColor": "#d0c7b8",
+        "lightSchemeBackgroundColor": "#dcdad7",
+        "lightSchemeTextColor": "#181a1b",
+        "scrollbarColor": "auto",
+        "selectionColor": "auto"
+    },
+    "customThemes": [],
+    "siteList": [
+        "mail.google.com",
+        "fcm.ens.uabc.mx",
+        "www.youtube.com"
+    ],
+    "siteListEnabled": [],
+    "applyToListedOnly": false,
+    "changeBrowserTheme": false,
+    "notifyOfNews": false,
+    "syncSettings": true,
+    "automation": "time",
+    "time": {
+        "activation": "21:00",
+        "deactivation": "9:00"
+    },
+    "location": {
+        "latitude": null,
+        "longitude": null
+    },
+    "previewNewDesign": true,
+    "enableForPDF": true
+}

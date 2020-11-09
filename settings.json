@@ -1,0 +1,19 @@
+{
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "C_Cpp.clang_format_style": "Google",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.editor.revealIfOpen": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.rulers": [
+    80
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.renderControlCharacters": true,
+    "workbench.statusBar.visible": false
+}
