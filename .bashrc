@@ -87,11 +87,43 @@ fi
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
 
-# some more ls aliases
+# some more handy aliases
 alias ll='ls -alF'
 alias la='ls -A'
 alias l='ls -CF'
-alias git log='git log --graph --abbrev-commit --decorate --date=relative --all'
+
+alias cd..='cd ..'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+
+alias c='clear'
+alias h='history'
+alias j='jobs -l'
+
+alias vi='vim'
+
+alias mkdir='mkdir -pv'
+
+alias gitlog='git log --graph --abbrev-commit --decorate --date=relative --all'
+
+alias untar='tar -zxvf'
+
+alias ping='ping -c 5'
+alias fastping='ping -c 100 -s.2'
+
+alias diff='colordiff'
+
+alias mount='mount | column -t'
+
+alias mv='mv -i'
+alias cp='cp -i'
+alias ln='ln -i'
+
+alias wget='wget -c'
+
+alias please='sudo $(fc -ln -1)'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
