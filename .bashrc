@@ -117,13 +117,14 @@ alias diff='colordiff'
 
 alias mount='mount | column -t'
 
+alias rm='rm -iv'
 alias mv='mv -iv'
 alias cp='cp -iv'
 alias ln='ln -iv'
 
 alias wget='wget -c'
 
-alias please='sudo $(fc -ln -1)'
+alias please='echo "sudo $(fc -ln -1)" && sudo $(fc -ln -1)'
 
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
