@@ -72,6 +72,9 @@ case "$TERM" in
         ;;
 esac
 
+# mantain aliases when using sudo
+alias sudo='sudo '
+
 # enable color support of ls and also add handy aliases
 if [ -x /usr/bin/dircolors ]; then
     test -r ~/.dircolors && eval "$(dircolors -b ~/.dircolors)" || eval "$(dircolors -b)"
@@ -82,10 +85,14 @@ if [ -x /usr/bin/dircolors ]; then
     alias grep='grep --color=auto'
     alias fgrep='fgrep --color=auto'
     alias egrep='egrep --color=auto'
+
 fi
 
 # colored GCC warnings and errors
 export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quote=01'
+
+# colored pacman
+alias pacman='pacman --color always'
 
 # some more handy aliases
 alias ll='ls -alF'
@@ -155,3 +162,10 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 source ~/.rvm/scripts/rvm
+
+# Add PYTHON to PATH for scripting.
+export PYTHONPATH="${PYTHONPATH}:$HOME/.local/bin"
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
