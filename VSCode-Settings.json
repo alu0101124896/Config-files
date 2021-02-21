@@ -15,9 +15,6 @@
     "C_Cpp.updateChannel": "Insiders",
     "workbench.iconTheme": "vscode-icons",
     "editor.renderControlCharacters": true,
-    "vsicons.dontShowNewVersionMessage": true,
-    "oracledevtools.bookmarkFileFolder": "/home/sergio/Oracle/oracle.oracledevtools",
-    "oracledevtools.connectionConfiguration.configFilesFolder": "/home/sergio/Oracle/network/admin",
-    "oracledevtools.connectionConfiguration.walletFileFolder": "/home/sergio/Oracle/network/admin"
+    "vsicons.dontShowNewVersionMessage": true
 }
 
