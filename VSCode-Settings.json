@@ -1,24 +1,23 @@
 {
-	"editor.tabSize": 2,
-	"editor.renderWhitespace": "all",
-	"C_Cpp.clang_format_fallbackStyle": "Google",
-	"C_Cpp.clang_format_style": "Google",
-	"workbench.tree.renderIndentGuides": "always",
-	"workbench.editor.revealIfOpen": true,
-	"files.insertFinalNewline": true,
-	"files.trimFinalNewlines": true,
-	"files.trimTrailingWhitespace": true,
-	"editor.rulers": [
-	80
-	],
-	"explorer.confirmDragAndDrop": false,
-	"C_Cpp.updateChannel": "Insiders",
-	"workbench.iconTheme": "vscode-icons",
-	"editor.renderControlCharacters": true,
-	"vsicons.dontShowNewVersionMessage": true,
-  "window.title": "${dirty}${activeEditorShort}${separator}${rootName}${separator}VSCode",
-  "oracledevtools.bookmarkFileFolder": "/home/sergio/Oracle/oracle.oracledevtools",
-  "oracledevtools.connectionConfiguration.configFilesFolder": "/home/sergio/Oracle/network/admin",
-  "oracledevtools.connectionConfiguration.walletFileFolder": "/home/sergio/Oracle/network/admin"
+    "editor.tabSize": 2,
+    "editor.renderWhitespace": "all",
+    "C_Cpp.clang_format_fallbackStyle": "Google",
+    "C_Cpp.clang_format_style": "Google",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.editor.revealIfOpen": true,
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+    "files.trimTrailingWhitespace": true,
+    "editor.rulers": [
+        80
+    ],
+    "explorer.confirmDragAndDrop": false,
+    "C_Cpp.updateChannel": "Insiders",
+    "workbench.iconTheme": "vscode-icons",
+    "editor.renderControlCharacters": true,
+    "vsicons.dontShowNewVersionMessage": true,
+    "oracledevtools.bookmarkFileFolder": "/home/sergio/Oracle/oracle.oracledevtools",
+    "oracledevtools.connectionConfiguration.configFilesFolder": "/home/sergio/Oracle/network/admin",
+    "oracledevtools.connectionConfiguration.walletFileFolder": "/home/sergio/Oracle/network/admin"
 }
 
