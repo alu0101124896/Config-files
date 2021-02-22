@@ -66,7 +66,7 @@ set lazyredraw
 set display+=lastline
 
 " Use an encoding that supports unicode.
-set encoding=utf-8
+set encoding=UTF-8
 
 " Avoid wrapping a line in the middle of a word.
 set linebreak
@@ -136,6 +136,24 @@ set number
 
 " Use colors that suit a dark/light background.
 set background=dark
+
+
+"""""""""""""""""""""""""""""""""""""
+" Plugins
+"""""""""""""""""""""""""""""""""""""
+
+" NERDTree "
+
+" Start NERDTree and put the cursor back in the other window.
+"autocmd VimEnter * NERDTree | wincmd p
+
+" Start NERDTree when Vim is started without file arguments.
+autocmd StdinReadPre * let s:std_in=1
+autocmd VimEnter * if argc() == 0 && !exists('s:std_in') | NERDTree | endif
+
+" Exit Vim if NERDTree is the only window left.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() |
+    \ quit | endif
 
 
 """""""""""""""""""""""""""""""""""""
