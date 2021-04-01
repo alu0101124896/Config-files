@@ -1,5 +1,5 @@
 {
-    "enabled": true,
+    "enabled": false,
     "theme": {
         "mode": 1,
         "brightness": 100,
@@ -7,37 +7,57 @@
         "grayscale": 0,
         "sepia": 25,
         "useFont": false,
-        "fontFamily": "system-ui",
+        "fontFamily": "Open Sans",
         "textStroke": 0,
         "engine": "dynamicTheme",
         "stylesheet": "",
         "darkSchemeBackgroundColor": "#181a1b",
-        "darkSchemeTextColor": "#d0c7b8",
+        "darkSchemeTextColor": "#d0c9bd",
         "lightSchemeBackgroundColor": "#dcdad7",
         "lightSchemeTextColor": "#181a1b",
         "scrollbarColor": "auto",
-        "selectionColor": "auto"
+        "selectionColor": "auto",
+        "styleSystemControls": true
     },
+    "presets": [],
     "customThemes": [],
     "siteList": [
+        "www.youtube.com",
+        "file:",
+        "localhost:21303",
+        "developer.amazon.com",
         "mail.google.com",
-        "fcm.ens.uabc.mx",
-        "www.youtube.com"
+        "stackoverflow.com",
+        "docs.google.com",
+        "app.diagrams.net",
+        "www.goconqr.com",
+        "view.genial.ly",
+        "192.168.1.1",
+        "github.com",
+        "my.ebay.es",
+        "colab.research.google.com",
+        "127.0.0.1:4000",
+        "ull-esit-gradoii-pl.github.io",
+        "www.netlify.com",
+        "app.netlify.com",
+        "ull-esit-pl-2021.github.io"
     ],
     "siteListEnabled": [],
     "applyToListedOnly": false,
     "changeBrowserTheme": false,
     "notifyOfNews": false,
     "syncSettings": true,
-    "automation": "time",
+    "syncSitesFixes": false,
+    "automation": "location",
     "time": {
         "activation": "21:00",
         "deactivation": "9:00"
     },
     "location": {
-        "latitude": null,
-        "longitude": null
+        "latitude": 28.46,
+        "longitude": -16.25
     },
     "previewNewDesign": true,
-    "enableForPDF": true
+    "enableForPDF": true,
+    "enableForProtectedPages": false
 }
