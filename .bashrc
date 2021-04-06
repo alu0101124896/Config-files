@@ -100,7 +100,7 @@ export GCC_COLORS='error=01;31:warning=01;35:note=01;36:caret=01;32:locus=01:quo
 alias diff='colordiff'
 
 # colored pacman
-alias pacman='pacman --color always'
+# alias pacman='pacman --color always'
 
 # some more handy aliases
 alias ll='ls -alF'
@@ -169,11 +169,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source ~/.rvm/scripts/rvm
-
 # Add PYTHON to PATH for scripting.
 export PYTHONPATH="${PYTHONPATH}:$HOME/.local/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
