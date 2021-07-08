@@ -8,6 +8,11 @@ case $- in
     *) return;;
 esac
 
+# Match colors with the current desktop wallpaper
+# wal -qi $(xfconf-query -c xfce4-desktop -p /backdrop/screen0/monitorHDMI-0/workspace0/last-image) -n
+(cat ~/.cache/wal/sequences &)
+source ~/.cache/wal/colors-tty.sh
+
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
 HISTCONTROL=ignoreboth
@@ -25,7 +30,7 @@ shopt -s checkwinsize
 
 # If set, the pattern "**" used in a pathname expansion context will
 # match all files and zero or more directories and subdirectories.
-#shopt -s globstar
+shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
@@ -117,10 +122,13 @@ alias c='clear'
 alias h='history'
 alias j='jobs -l'
 
+alias open='xdg-open'
+
 alias vi='vim'
 
 alias mkdir='mkdir -pv'
 
+alias gs='git status'
 alias gitlog='git log --graph --abbrev-commit --decorate --date=relative --all'
 
 alias untar='tar -zxvf'
@@ -171,9 +179,6 @@ export NVM_DIR="$HOME/.nvm"
 
 # Add PYTHON to PATH for scripting.
 export PYTHONPATH="${PYTHONPATH}:$HOME/.local/bin"
-
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-export PATH="$PATH:$HOME/.rvm/bin"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
