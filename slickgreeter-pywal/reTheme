@@ -1,8 +1,14 @@
 #!/bin/sh
 
 FILEPATH="$1"
+
+# Set pywal's color scheme
 wal -i "$FILEPATH"
 
-cp "$1" "/usr/share/wallpapers/wal"
+# Set polybar's color scheme
+$HOME/.config/polybar/hack/scripts/pywal.sh "$FILEPATH"
+
+# Set the given file as the default desktop wallpaper
+cp "$FILEPATH" "/usr/share/wallpapers/wal"
 
 echo "$FILEPATH" 
