@@ -1,0 +1,9 @@
+[Desktop Entry]
+Type=Application
+Name=Dropbox
+Comment=File hosting service in cloud storage
+Exec=/home/sergio/.dropbox-dist/dropboxd
+StartupNotify=false
+Terminal=false
+Hidden=false
+
