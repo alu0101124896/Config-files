@@ -1,0 +1,10 @@
+# ~/.config/autostart/Polybar.desktop
+[Desktop Entry]
+Type=Application
+Name=Polybar
+Comment=A fast and easy to use tool for creating status bars
+Exec=/home/sergio/.config/polybar/hack/launch.sh &
+StartupNotify=false
+Terminal=false
+Hidden=false
+
