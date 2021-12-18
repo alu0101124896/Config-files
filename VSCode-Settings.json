@@ -1,35 +1,56 @@
 {
-    "editor.tabSize": 2,
-    "editor.renderWhitespace": "all",
-    "editor.renderControlCharacters": true,
-    "editor.rulers": [
-        80
-    ],
     "editor.codeActionsOnSave": {
         "source.fixAll.eslint": true
     },
-    "workbench.tree.renderIndentGuides": "always",
-    "workbench.iconTheme": "vscode-icons",
-    "workbench.productIconTheme": "fluent-icons",
-    "workbench.editor.revealIfOpen": true,
-    "workbench.editorAssociations": [
-        {
-            "viewType": "jupyter.notebook.ipynb",
-            "filenamePattern": "*.ipynb"
-        }
+    "editor.renderControlCharacters": true,
+    "editor.renderWhitespace": "all",
+    "editor.rulers": [
+        80
     ],
+    "editor.tabSize": 2,
+    "diffEditor.ignoreTrimWhitespace": false,
+    "editor.suggestSelection": "first",
+    "files.associations": {
+        "*.evm": "json"
+    },
     "files.insertFinalNewline": true,
     "files.trimFinalNewlines": true,
     "files.trimTrailingWhitespace": true,
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook"
+    },
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.startupEditor": "none",
+    "workbench.iconTheme": "vscode-icons",
+    "workbench.tree.renderIndentGuides": "always",
+    "workbench.editor.revealIfOpen": true,
     "explorer.confirmDragAndDrop": false,
-    "vsicons.dontShowNewVersionMessage": true,
+    "debug.openExplorerOnEnd": true,
+    "notebook.cellToolbarLocation": {
+        "default": "right",
+        "jupyter-notebook": "left"
+    },
+    "security.workspace.trust.untrustedFiles": "open",
     "C_Cpp.clang_format_fallbackStyle": "Google",
     "C_Cpp.clang_format_style": "Google",
     "C_Cpp.updateChannel": "Insiders",
-    "liveshare.presence": true,
-    "javascript.updateImportsOnFileMove.enabled": "always",
     "eslint.format.enable": true,
+    "eslint.validate": [
+        "javascript"
+    ],
+    "eslint.workingDirectories": [
+        {
+            "mode": "auto"
+        }
+    ],
+    "javascript.updateImportsOnFileMove.enabled": "always",
     "[javascript]": {
         "editor.defaultFormatter": "dbaeumer.vscode-eslint"
-    }
+    },
+    "python.languageServer": "Pylance",
+    "redhat.telemetry.enabled": false,
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "liveshare.presence": true,
+    "vsicons.dontShowNewVersionMessage": true,
 }
+
