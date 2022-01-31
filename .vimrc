@@ -132,10 +132,10 @@ set number
 " set title -title-
 
 " Change color scheme.
-" colorscheme -scheme-
+colorscheme default
 
 " Use colors that suit a dark/light background.
-set background=dark
+set background=light
 
 
 """""""""""""""""""""""""""""""""""""
