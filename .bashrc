@@ -137,6 +137,7 @@ alias ping='ping -c 5'
 alias fastping='ping -c 100 -s.2'
 
 alias bt='bluetoothctl'
+alias rst-bt='systemctl --user restart pulseaudio && sudo systemctl restart bluetooth.service && bluetoothctl'
 
 alias mount='mount | column -t'
 
@@ -181,7 +182,7 @@ export NVM_DIR="$HOME/.nvm"
 export PYTHONPATH="$PYTHONPATH:$HOME/.local/bin"
 
 # Add GOPATH for Go user binaries.
-export GOPATH="$GOPATH:$HOME/.go/bin"
+export GOPATH="$HOME/.go"
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
