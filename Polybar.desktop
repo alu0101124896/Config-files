@@ -3,8 +3,7 @@
 Type=Application
 Name=Polybar
 Comment=A fast and easy to use tool for creating status bars
-Exec=/home/sergio/.config/polybar/hack/launch.sh &
+Exec=/home/sergio/.config/polybar/launch.sh &
 StartupNotify=false
 Terminal=false
 Hidden=false
-
