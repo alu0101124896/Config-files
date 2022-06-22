@@ -2,11 +2,7 @@
 
 get_gpu_fan_speed() {
   GPU_FAN_SPEED=$(
-    nvidia-smi |
-    sed -n '10p' |
-    xargs -n 1 |
-    sed -n '2p' |
-    tr -d -c 0-9
+    nvidia-smi --query-gpu=fan.speed --format=csv,noheader,nounits
   );
 }
 

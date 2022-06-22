@@ -2,11 +2,7 @@
 
 get_gpu_util() {
   GPU_UTIL=$(
-    nvidia-smi |
-    sed -n '10p' |
-    xargs -n 1 |
-    sed -n '13p' |
-    tr -d -c 0-9
+    nvidia-smi --query-gpu=utilization.gpu --format=csv,noheader,nounits
   );
 }
 

@@ -2,11 +2,7 @@
 
 get_gpu_temp() {
   GPUTEMP=$(
-    nvidia-smi |
-    sed -n '10p' |
-    xargs -n 1 |
-    sed -n '3p'|
-    tr -d -c 0-9
+    nvidia-smi --query-gpu=temperature.gpu --format=csv,noheader,nounits
   );
 }
 
