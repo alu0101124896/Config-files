@@ -76,7 +76,7 @@ unset color_prompt force_color_prompt
 # If this is an xterm set the title to user@host:dir
 case "$TERM" in
     xterm*|rxvt*)
-        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h: \w\a\]$PS1"
+        PS1="\[\e]0;${debian_chroot:+($debian_chroot)}\u@\h:\w\a\]$PS1"
         ;;
     *)
         ;;
@@ -138,6 +138,8 @@ alias fastping='ping -c 100 -s.2'
 
 alias bt='bluetoothctl'
 alias rst-bt='systemctl --user restart pulseaudio && sudo systemctl restart bluetooth.service && bluetoothctl'
+
+alias rst-pb='polybar-msg cmd restart'
 
 alias mount='mount | column -t'
 
