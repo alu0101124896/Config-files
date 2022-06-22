@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Color files
-PFILE="$HOME/.config/polybar/hack/colors.ini"
-RFILE="$HOME/.config/polybar/hack/scripts/rofi/colors.rasi"
+PFILE="$HOME/.config/polybar/colors.ini"
+RFILE="$HOME/.config/polybar/scripts/rofi/colors.rasi"
 
 # Change colors
 change_color() {
@@ -10,7 +10,7 @@ change_color() {
 	sed -i -e 's/background = #.*/background = #FFFFFF/g' $PFILE
 	sed -i -e 's/foreground = #.*/foreground = #1F1F1F/g' $PFILE
 	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
-	
+
 	# rofi
 	cat > $RFILE <<- EOF
 	/* colors */
@@ -23,7 +23,7 @@ change_color() {
 	  fg:    #1F1F1FFF;
 	}
 	EOF
-	
+
 	polybar-msg cmd restart
 }
 

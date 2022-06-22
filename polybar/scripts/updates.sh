@@ -3,7 +3,7 @@
 NOTIFY_ICON=/usr/share/icons/candy-icons/apps/scalable/system-software-update.svg
 
 get_total_updates() {
-    UPDATES=$(~/.config/polybar/hack/scripts/checkupdates.sh 2>/dev/null | wc -l);
+    UPDATES=$(~/.config/polybar/scripts/checkupdates.sh 2>/dev/null | wc -l);
 }
 
 while true; do

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Color files
-PFILE="$HOME/.config/polybar/hack/colors.ini"
-RFILE="$HOME/.config/polybar/hack/scripts/rofi/colors.rasi"
+PFILE="$HOME/.config/polybar/colors.ini"
+RFILE="$HOME/.config/polybar/scripts/rofi/colors.rasi"
 
 # Get colors
 pywal_get() {
@@ -15,7 +15,7 @@ change_color() {
 	sed -i -e "s/background = #.*/background = $BG/g" $PFILE
 	sed -i -e "s/foreground = #.*/foreground = $FG/g" $PFILE
 	sed -i -e "s/primary = #.*/primary = $AC/g" $PFILE
-	
+
 	# rofi
 	cat > $RFILE <<- EOF
 	/* colors */
@@ -28,7 +28,7 @@ change_color() {
 	  fg:    ${FG}FF;
 	}
 	EOF
-	
+
 	polybar-msg cmd restart
 }
 
