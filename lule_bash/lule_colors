@@ -1,4 +1,4 @@
-#sent color sequences to all ppts (most important piece of this script)
+# Send color sequences to all ppts (most important piece of this script).
 colors_to_tty(){
     for tt in /dev/pts/*; do
         re='^[0-9]+$'; [[ $(basename $tt) =~ $re ]] && cat $HOME/.cache/wal/sequences > $tt;
@@ -6,7 +6,7 @@ colors_to_tty(){
 }
 colors_to_tty &
 
-#apply all colors (or specific command) to nvim needs 'pip install neovim-remote' and 'lsof'
+# Apply all colors (or specific command) to nvim needs 'pip install neovim-remote' and 'lsof'.
 colors_to_nvim(){
     if command -v nvr &> /dev/null ; then
         for i in `pidof nvim`; do
@@ -35,11 +35,12 @@ run_hooks() {
         for hook in `find /usr/share/lule/generators -type f`; do
             echo Running "$hook"
             $hook;
+        done
     else
         echo "No hook directory found";
     fi
 }
-run_hooks &
+# run_hooks &
 
-#apply all colors to firefox needs 'pip install pywalfox'
+# Apply all colors to firefox needs 'pip install pywalfox'.
 python $HOME/.local/bin/pywalfox update &
