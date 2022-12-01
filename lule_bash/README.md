@@ -4,6 +4,7 @@
 
 lule
 ===
+ ## [By warpwm at GitHub](https://github.com/warpwm/lule_bash.git)
 
 A bash(y) alternative to [pywal](https://github.com/dylanaraps/pywal) by mostly using [pastel](https://github.com/sharkdp/pastel) to generate the full 255 colors from an image. 
 
