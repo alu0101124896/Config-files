@@ -22,4 +22,3 @@ unsigned int defaultrcs= 258;
 """
 with open(expanduser('~/.cache/wal/colors-wal-st.h'), 'w') as colors:
     colors.write(header)
-

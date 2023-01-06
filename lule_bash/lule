@@ -53,7 +53,7 @@ check_if_binaries_exist() {
 }
 
 check_if_palettes_exist() {
-    for index in ${!_optional_paletes[*]}; do 
+    for index in ${!_optional_paletes[*]}; do
         if command -v ${_optional_paletes[$index]} &> /dev/null ; then
             return
         fi
@@ -174,7 +174,7 @@ set_config_vars(){
 
 delete_scheme(){
     if [[ $1 == "default" ]]; then
-        1>&2 printf "cannot delete ${col[3]}'default'${col[0]} scheme\n" 
+        1>&2 printf "cannot delete ${col[3]}'default'${col[0]} scheme\n"
         exit;
     fi
 
@@ -189,7 +189,7 @@ delete_scheme(){
 
 # use pipe json to set variables
 set_pipe_vars(){
-    echo 
+    echo
     PIPE="$(</dev/stdin)"
     [[ -z $PIPE ]] && return
     [[ $(echo $PIPE | jq -e ".[] | has(\"name\")") == true ]] && _default_scheme=$(echo $PIPE | jq ".[].name" | tr -d '"')
@@ -347,9 +347,9 @@ logo(){
 # generate colors from wallaper with different tools
 _optional_paletes=(pigmnts schemer2 convert imgscheme)
 _optional_paletes_sources=(
-    "https://github.com/blenderskool/pigmnts" 
+    "https://github.com/blenderskool/pigmnts"
     "https://github.com/thefryscorer/schemer2"
-    "https://github.com/ImageMagick/ImageMagick" 
+    "https://github.com/ImageMagick/ImageMagick"
     "https://github.com/wwalexander/imgscheme"
 )
 _arg_palette=$_default_palette
@@ -373,7 +373,7 @@ palette() {
 
 _optional_sorts=(brightness luminance hue chroma random)
 all_paletes(){
-    for index in ${!_optional_paletes[*]}; do 
+    for index in ${!_optional_paletes[*]}; do
         if [[ "$_arg_paletter_s" == "true" ]]; then
             printf " - ${col[3]}${_optional_paletes[$index]}\'s${col[0]} source code is in:\n\t${col[3]}${_optional_paletes_sources[$index]}${col[0]}\n\n"
         elif [[ "$_arg_paletter_c" == "true" ]]; then
@@ -489,9 +489,9 @@ generate_colors_other() {
 
 #generating gradients (colors 232-255)
 generate_colors_gradient() {
-    pastel -f gradient $black $back -n 3 | xargs -0 | head -n -1 | pastel format hex >> $HOME/.cache/wal/colors 
-    pastel -f gradient $back $col1 $fore -n 18 | xargs -0 | head -n -1 | pastel format hex >> $HOME/.cache/wal/colors 
-    pastel -f gradient $fore $white -n 3 | xargs -0 | head -n -1 | pastel format hex >> $HOME/.cache/wal/colors 
+    pastel -f gradient $black $back -n 3 | xargs -0 | head -n -1 | pastel format hex >> $HOME/.cache/wal/colors
+    pastel -f gradient $back $col1 $fore -n 18 | xargs -0 | head -n -1 | pastel format hex >> $HOME/.cache/wal/colors
+    pastel -f gradient $fore $white -n 3 | xargs -0 | head -n -1 | pastel format hex >> $HOME/.cache/wal/colors
 }
 
 
@@ -508,13 +508,13 @@ generate_colors(){
     if [ $(cat $HOME/.cache/wal/theme) == "light" ] ; then
         white="#000000"
         black="#ffffff"
-        back=$col15 
+        back=$col15
         fore=$col0
     else
         black="#000000"
         white="#ffffff"
-        back=$col0
         fore=$col15
+        back=$col0
     fi
 
     generate_colors_main
@@ -620,10 +620,10 @@ usage() {
 
     printf "\n${col[2]}OPTIONS:${col[0]}\n\
     ${col[2]}--palette[=]<name>${col[0]} -> ";
-    for index in ${!_optional_paletes[*]}; do 
+    for index in ${!_optional_paletes[*]}; do
         printf "${col[3]}"
         [[ ${_optional_paletes[$index]} == $_default_palette ]] && printf "{ "
-        printf "${_optional_paletes[$index]}"; 
+        printf "${_optional_paletes[$index]}";
         [[ ${_optional_paletes[$index]} == $_default_palette ]] && printf " }"
         printf "${col[0]} , "
     done
@@ -631,17 +631,17 @@ usage() {
     ${col[2]}--configs[=]<filepath>${col[0]} :: or specify ${col[3]}\$LULE_C${col[0]} as environment variable
     \tspecify a config file where to load color preferences\n\
     ${col[2]}--scheme[=]<name>${col[0]} -> ";
-    for index in `jq '.[].name' $_default_configs_file | tr -d '"'`; do 
+    for index in `jq '.[].name' $_default_configs_file | tr -d '"'`; do
         printf "${col[3]}"
-        printf "$index"; 
+        printf "$index";
         printf "${col[0]} , "
     done
     printf "\n\tspecify the scheme form configs\n\
     ${col[2]}--sort[=]<name>${col[0]} -> ";
-    for index in ${!_optional_sorts[*]}; do 
+    for index in ${!_optional_sorts[*]}; do
         printf "${col[3]}"
         [[ ${_optional_sorts[$index]} == $_default_sort ]] && printf "{ "
-        printf "${_optional_sorts[$index]}"; 
+        printf "${_optional_sorts[$index]}";
         [[ ${_optional_sorts[$index]} == $_default_sort ]] && printf " }"
         printf "${col[0]} , "
     done
@@ -741,13 +741,13 @@ parse_command() {
                 if [[ $# -lt 2 ]]; then 1>&2 printf "${col[1]}Missing value for the argument: ${col[3]}'$_key'.\n${col[0]}" && usage_palette && exit; fi
                 _arg_sort="$2"
                 [[ ! " ${_optional_sorts[@]} " =~ " ${_arg_sort} " ]] && 1>&2 printf "${col[1]}Not a valid argument for: ${col[3]}'$_key'.\n${col[0]}" && exit;
-                _default_sort=$_arg_sort; 
+                _default_sort=$_arg_sort;
                 shift
                 ;;
             --sort=*)
                 _arg_sort="${_key##--sort=}"
                 [[ ! " ${_optional_sorts[@]} " =~ " ${_arg_sort} " ]] && 1>&2 printf "${col[1]}Not a valid argument for: ${col[3]}'$_key'.\n${col[0]}" && exit;
-                _default_sort=$_arg_sort; 
+                _default_sort=$_arg_sort;
                 ;;
             --palette)
                 if [[ $# -lt 2 ]]; then 1>&2 printf "${col[1]}Missing value for the argument: ${col[3]}'$_key'.\n${col[0]}" && usage_palette && exit; fi
@@ -825,7 +825,7 @@ positionals_command() {
         exit
     fi
 
-    local _positional_name 
+    local _positional_name
     shift "$1"
     for _positional_name in ${_positional_commands[@]}
     do
@@ -1068,13 +1068,13 @@ parse_configs() {
             --sort=*)
                 _arg_sort="${_key##--sort=}"
                 [[ ! " ${_optional_sorts[@]} " =~ " ${_arg_sort} " ]] && 1>&2 printf "${col[1]}Not a valid argument for: ${col[3]}'$_key'.\n${col[0]}" && exit;
-                _default_sort=$_arg_sort; 
+                _default_sort=$_arg_sort;
                 ;;
             --palette)
                 if [[ $# -lt 2 ]]; then 1>&2 printf "${col[1]}Missing value for the argument: ${col[3]}'$_key'.\n${col[0]}" && usage_palette && exit; fi
                 _arg_palette="$2"
                 [[ ! " ${_optional_sorts[@]} " =~ " ${_arg_sort} " ]] && 1>&2 printf "${col[1]}Not a valid argument for: ${col[3]}'$_key'.\n${col[0]}" && exit;
-                _default_sort=$_arg_sort; 
+                _default_sort=$_arg_sort;
                 shift
                 ;;
             --palette=*)

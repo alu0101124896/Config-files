@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 # Send color sequences to all ppts (most important piece of this script).
 colors_to_tty(){
     for tt in /dev/pts/*; do
