@@ -78,7 +78,7 @@ get_process() {
     if [ "$proc" = "0:00/" ]; then
         echo ""
     else
-        echo "$proc"
+        echo "$proc "
     fi
 }
 
