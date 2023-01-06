@@ -1,3 +1,4 @@
+# ~/.config/autostart/Dropbox.desktop: Autostart dropbox
 [Desktop Entry]
 Type=Application
 Name=Dropbox
@@ -6,4 +7,3 @@ Exec=/home/sergio/.dropbox-dist/dropboxd
 StartupNotify=false
 Terminal=false
 Hidden=false
-

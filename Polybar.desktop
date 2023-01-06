@@ -1,4 +1,4 @@
-# ~/.config/autostart/Polybar.desktop
+# ~/.config/autostart/Polybar.desktop: Autostart polybar
 [Desktop Entry]
 Type=Application
 Name=Polybar
