@@ -1,5 +1,9 @@
-# /etc/inputrc - global inputrc for libreadline
+# ~/.inputrc - local inputrc for libreadline
 # See readline(3readline) and `info rluserman' for more information.
+
+# Do not bell on tab-completion
+# set bell-style none
+# set bell-style visible
 
 # Be 8 bit clean.
 set input-meta on
@@ -8,22 +12,23 @@ set output-meta on
 # To allow the use of 8bit-characters like the german umlauts, uncomment
 # the line below. However this makes the meta key not work as a meta key,
 # which is annoying to those which don't need to type in 8-bit characters.
-
 set meta-flag on
 set convert-meta off
 
-# try to enable the application keypad when it is called.  Some systems
+# Try to enable the application keypad when it is called.  Some systems
 # need this to enable the arrow keys.
 # set enable-keypad on
 
-# see /usr/share/doc/bash/inputrc.arrows for other codes of arrow keys
+# Completed names which are symbolic links to
+# directories have a slash appended.
+set mark-symlinked-directories on
 
-# do not bell on tab-completion
-# set bell-style none
-# set bell-style visible
+# See /usr/share/doc/bash/inputrc.arrows for other codes of arrow keys
 
-# some defaults / modifications for the emacs mode
+# Some defaults / modifications for the emacs mode
 $if mode=emacs
+
+# For linux console and RH/Debian xterm:
 
 # allow the use of the Home/End keys
 "\e[1~": beginning-of-line
@@ -54,6 +59,7 @@ $if mode=emacs
 "\C-h": backward-kill-word
 "\e[3;5~": kill-word
 
+# For rxvt
 $if term=rxvt
 "\e[7~": beginning-of-line
 "\e[8~": end-of-line
@@ -61,11 +67,11 @@ $if term=rxvt
 "\eOd": backward-word
 $endif
 
-# for non RH/Debian xterm, can't hurt for RH/Debian xterm
+# For non RH/Debian xterm, can't hurt for RH/Debian xterm
 "\eOH": beginning-of-line
 "\eOF": end-of-line
 
-# for freebsd console
+# For freebsd console
 "\e[H": beginning-of-line
 "\e[F": end-of-line
 
