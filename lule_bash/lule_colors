@@ -45,4 +45,4 @@ run_hooks() {
 # run_hooks &
 
 # Apply all colors to firefox needs 'pip install pywalfox'.
-python $HOME/.local/bin/pywalfox update &
+# python $HOME/.local/bin/pywalfox update &
