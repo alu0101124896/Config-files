@@ -33,11 +33,15 @@ shopt -s checkwinsize
 shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-if [ -x /usr/bin/lesspipe ]; then
-    eval "$(SHELL=/bin/sh lesspipe)"
-elif [ -x /usr/bin/lesspipe.sh ]; then
-    eval "$(SHELL=/bin/sh lesspipe.sh)"
-fi
+# if [ -x /usr/bin/lesspipe ]; then
+#     eval "$(SHELL=/bin/sh lesspipe)"
+# elif [ -x /usr/bin/lesspipe.sh ]; then
+#     eval "$(SHELL=/bin/sh lesspipe.sh)"
+# fi
+
+# alternative (?) :
+[ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
+
 
 # set variable identifying the chroot you work in (used in the prompt below)
 if [ -z "${debian_chroot:-}" ] && [ -r /etc/debian_chroot ]; then
@@ -154,10 +158,10 @@ alias ln='ln -iv'
 
 alias wget='wget -c'
 
-if ! [ -f /usr/bin/bat ] && [ -f /usr/bin/batcat ]; then
-    alias bat='batcat'
-fi
-# export PAGER='bat'
+# if ! [ -f /usr/bin/bat ] && [ -f /usr/bin/batcat ]; then
+#     alias bat='batcat'
+# fi
+# # export PAGER='bat'
 
 alias please='echo "sudo $(fc -ln -1)" && sudo $(fc -ln -1)'
 
