@@ -36,11 +36,11 @@ shopt -s checkwinsize
 shopt -s globstar
 
 # make less more friendly for non-text input files, see lesspipe(1)
-# if [ -x /usr/bin/lesspipe ]; then
-#     eval "$(SHELL=/bin/sh lesspipe)"
-# elif [ -x /usr/bin/lesspipe.sh ]; then
-#     eval "$(SHELL=/bin/sh lesspipe.sh)"
-# fi
+if [ -x /usr/bin/lesspipe ]; then
+    eval "$(SHELL=/bin/sh lesspipe)"
+elif [ -x /usr/bin/lesspipe.sh ]; then
+    eval "$(SHELL=/bin/sh lesspipe.sh)"
+fi
 
 # alternative (?) :
 [ -x /usr/bin/lesspipe ] && eval "$(SHELL=/bin/sh lesspipe)"
