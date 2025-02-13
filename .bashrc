@@ -124,5 +124,8 @@ export PYTHONPATH="$PYTHONPATH:$HOME/.local/bin"
 # Add GOPATH for Go user binaries.
 export GOPATH="$HOME/.go"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+# Add Rust binaries to PATH.
+export PATH="$PATH:$HOME/.cargo/bin"
+
+# Add RVM binaries to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
