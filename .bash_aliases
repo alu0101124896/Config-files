@@ -5,7 +5,7 @@
 #
 # You can add your own aliases below.
 
-# mantain aliases when using sudo
+# maintain aliases when using sudo
 alias sudo='sudo '
 
 # enable color support of ls and also add handy aliases
